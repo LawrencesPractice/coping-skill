@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navigation from './components/navigation/Navigation';
+import Home from './components/home/Home';
+import DeepBreathing from './components/FocusTools/DeepBreathing';
+// import other pages...
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Navigation/>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/deep-breathing" element={<DeepBreathing />} />
+        {/* <Route path="/other-path" element={<OtherComponent />} /> */}
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
