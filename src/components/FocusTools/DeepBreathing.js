@@ -29,18 +29,7 @@ const Path = styled.path`
 `;
 
 
-const EmotionButton = styled.button`
-  padding: 8px 12px;
-  background-color: #333;
-  color: white;
-  border: none;
-  cursor: pointer;
-`;
 
-const EncouragingPhrase = styled.p`
-  margin-top: 10px;
-  font-weight: bold;
-`;
 
 const ParkPath = styled.path`
   fill: none;
