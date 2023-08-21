@@ -30,23 +30,19 @@ const Path = styled.path`
 
 
 
-
-const ParkPath = styled.path`
-  fill: none;
-  stroke: #3A923A;
-  stroke-width: 8;
+const EyeWrapper = styled.svg`
+  width: 400px;
+  height: auto;
+  animation: breathe 10s infinite alternate;
+  transform-origin: center;
 `;
 
-const Heart = styled.path`
-  fill: #FF0000;
-  stroke: none;
-`;
 
-const Bridge = styled.path`
+
+const Eye = styled.path`
   fill: #A9A9A9;
   stroke: none;
 `;
-
 
 const DeepBreathing = () => {
   const [isDrawing, setIsDrawing] = useState(false);
@@ -63,17 +59,15 @@ const DeepBreathing = () => {
 
       {isDrawing && (
         <ParkScene xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-          <Path d="M30 100 Q 100 50 170 100 T 310 100" />
+          <Path d="M50 200 Q 200 50 350 200" />
+          <Path d="M50 200 Q 200 350 350 200" />
+          <EyeWrapper xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+            <Eye d="M170 200 L 230 200 Q 200 220 170 200" />
+            <Eye d="M230 200 L 170 200 Q 200 180 230 200" />
+            <Eye d="M200 180 Q 220 200 200 220 Q 180 200 200 180" />
+          </EyeWrapper>
         </ParkScene>
       )}
-
-<ParkScene xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-        <ParkPath d="M50 200 Q 200 50 350 200" />
-        <ParkPath d="M50 200 Q 200 350 350 200" />
-        <Heart d="M180 150 A 50 50 0 0 1 220 150 A 50 50 0 0 1 180 150" />
-        <Bridge d="M170 200 L 230 200 Q 200 220 170 200" />
-      </ParkScene>
-
     </DeepBreathingWrapper>
   );
 };
