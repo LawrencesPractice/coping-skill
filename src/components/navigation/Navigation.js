@@ -5,15 +5,20 @@ import styled from 'styled-components';
 const Nav = styled.nav`
   background: #333;
   padding: 10px;
+  display: flex;
+  justify-content: center;
 `;
 
 const NavLink = styled(Link)`
   color: white;
-  margin-right: 15px;
+  margin: 0 10px;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s;
 
   &:hover {
-    text-decoration: underline;
+    color: #ffcc00;
   }
 `;
 
