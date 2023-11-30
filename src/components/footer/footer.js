@@ -18,8 +18,7 @@ margin: 0 auto;  // centers the navbar
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 20px;
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #000;
 
   @media ${device.tablet} {
     grid-template-columns: repeat(2, 1fr);

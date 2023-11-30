@@ -7,7 +7,6 @@ import {
   Column,
   Logo,
   Column2,
-  SignIn,
   GetStarted,
   Explore,
   NavLinkDropdown,
@@ -27,8 +26,8 @@ const Navigation = () => {
           </Logo>
         </Column>
         <Column2>
-          <GetStarted to="/">Get started</GetStarted>
-          <Explore to="/getStarted">Explore</Explore>
+          <GetStarted to="/innerCalmExercise">Get started</GetStarted>
+          <Explore to="/explore">Explore</Explore>
           <NavLinkDropdown to="/">
             About
           </NavLinkDropdown>
