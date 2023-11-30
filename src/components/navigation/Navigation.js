@@ -34,9 +34,9 @@ const Navigation = () => {
         <Column2>
           <SignIn >Sign in</SignIn>
           <GetStarted to="/getStarted">Get started</GetStarted>
-          <Explore>Explore</Explore>
+          <Explore to="/getStarted">Explore</Explore>
           <NavLinkDropdown to="/">
-            <div className="about">About</div>
+            About
           </NavLinkDropdown>
           <Column4>
             <Button>

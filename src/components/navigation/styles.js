@@ -105,6 +105,14 @@ export const SignIn = styled(Link)`
   height: min-content;
   white-space: nowrap;
   flex-direction: column;
+  transition: color 0.2s ease-in-out;
+
+&:hover,
+&:focus {
+  color: #007BFF;
+  outline: none;
+}
+
 `;
 
 export const GetStarted = styled(Link)`
@@ -119,6 +127,12 @@ text-decoration: none;
   height: min-content;
   white-space: nowrap;
   flex-direction: column;
+  &:hover,
+  &:focus {
+    color: #007BFF;
+    outline: none;
+  }
+
 `;
 
 export const Explore = styled(Link)`
@@ -133,6 +147,13 @@ export const Explore = styled(Link)`
   height: min-content;
   white-space: nowrap;
   flex-direction: column;
+  transition: color 0.2s ease-in-out;
+
+&:hover,
+&:focus {
+  color: #007BFF;
+  outline: none;
+}
 `;
 
 export const NavLinkDropdown = styled(Link)`
@@ -147,6 +168,13 @@ width: min-content;
 height: min-content;
 white-space: nowrap;
 flex-direction: column;
+transition: color 0.2s ease-in-out;
+
+&:hover,
+&:focus {
+  color: #007BFF;
+  outline: none;
+}
 `;
 
 export const ChevronDown = styled.div`
@@ -177,6 +205,13 @@ export const Button = styled.button`
   display: inline-flex;
   align-items: center;
   gap: 4px;
+  transition: color 0.2s ease-in-out;
+
+&:hover,
+&:focus {
+  color: #007BFF;
+  outline: none;
+}
 `;
 
 export const Button2 = styled.button`
@@ -186,4 +221,11 @@ export const Button2 = styled.button`
   outline: solid 0.1px #000;
   background-color: black;
   color: white;
+  transition: color 0.2s ease-in-out;
+
+&:hover,
+&:focus {
+  color: #007BFF;
+  outline: none;
+}
 `;
