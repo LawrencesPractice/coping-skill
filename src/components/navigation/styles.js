@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import mindfulImage from '../../assets/mindful.png';
 
 // Define the device sizes for the media queries
 const size = {
@@ -13,8 +14,10 @@ const device = {
 };
 
 export const Navbar2 = styled.div`
-  width: 80%;  // navbar takes 80% of the screen width
-  margin: 0 auto;  // centers the navbar
+  background-image: url(${mindfulImage});
+  background-position: center top -0px; /* Cut off top part by 100px */
+  width: 80%;
+  margin: 0 auto;
   padding: 0 50px;
   height: 93px;
   flex-direction: column;
@@ -72,7 +75,8 @@ export const Column2 = styled.nav`
   justify-content: center;
   align-items: center;
   gap: 28px;
-  background-color: #fff;
+  background-color: transparent;
+  color: white;
   margin-top: 30px;
 
   @media ${device.tablet} {
@@ -98,7 +102,8 @@ export const Column3 = styled.div`
 export const SignIn = styled(Link)`
   color: white;
   margin: 0 10px;
-  text-decoration: none;
+  text-decoration: none;  color: white;
+
   color: #000;
   font-size: 18px;
   line-height: 150%;
@@ -121,7 +126,8 @@ export const GetStarted = styled(Link)`
 color: white;
 margin: 0 10px;
 text-decoration: none;
-  color: #000;
+  color: #000;   color: white;
+
   font-size: 18px;
   line-height: 150%;
   font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
@@ -142,7 +148,8 @@ export const Explore = styled(Link)`
   margin: 0 10px;
   text-decoration: none;
   color: #000;
-  font-size: 18px;
+  font-size: 18px;  color: white;
+
   line-height: 150%;
   font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
   width: min-content;
@@ -162,7 +169,8 @@ export const NavLinkDropdown = styled(Link)`
 color: white;
 margin: 0 10px;
 text-decoration: none;
-color: #000;
+color: #000;  color: white;
+
 font-size: 18px;
 line-height: 150%;
 font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
@@ -201,7 +209,8 @@ export const Column4 = styled.div`
 export const Button = styled.button`
   width: max-content;
   height: min-content;
-  padding: 10px 18px;
+  padding: 10px 18px;  color: white;
+
   font-size: 19px;
   outline: none;
   border: 1px solid #000;

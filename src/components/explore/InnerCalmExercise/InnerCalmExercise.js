@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const InnerCalmExercise = () => {
   const [calmState, setCalmState] = useState(false);
-  const [exerciseDuration, setExerciseDuration] = useState(300); // 5 minutes in seconds
+  let exerciseDuration = 300;
   const [timer, setTimer] = useState(exerciseDuration);
   const [completed, setCompleted] = useState(false);
   const [expandedSections, setExpandedSections] = useState([]);
