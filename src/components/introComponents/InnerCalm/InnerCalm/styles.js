@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 
 export const Header1 = styled.div`
-display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 40px;
-width: 100%;
-height: min-content;
-align-items: center;
-padding: 56px 10%;
-background-color: #fff;
-overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  width: 80%;  // take up 80% of the parent's width
+  margin: 0 auto;  // center the component horizontally
+  height: min-content;
+  align-items: center;
+  padding: 56px 10%;
+  background-color: #fff;
+  overflow: hidden;
 `;
 export const Content = styled.div`
 display: grid;
@@ -98,13 +99,10 @@ export const LearnMore = styled.div`
 `;
 
 export const PlaceholderImage = styled.div`
-  height: 520px;
-  flex: 1;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
   img{
     height: 520px;
 width: auto;
+float: right;
   }
 `;

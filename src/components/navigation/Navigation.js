@@ -21,14 +21,13 @@ const Navigation = () => {
     <Navbar2>
       <Container>
         <Column>
-          <Logo>
+          <Logo to="/">
             <img src={mainLogo} alt="fireSpot" />
 
           </Logo>
         </Column>
         <Column2>
-          <SignIn >Sign in</SignIn>
-          <GetStarted to="/getStarted">Get started</GetStarted>
+          <GetStarted to="/">Get started</GetStarted>
           <Explore to="/getStarted">Explore</Explore>
           <NavLinkDropdown to="/">
             About

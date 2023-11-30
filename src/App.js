@@ -6,6 +6,7 @@ import DeepBreathing from './components/FocusTools/DeepBreathing';
 import MuscleRelaxation from './components/muscleRelaxation/MuscleRelaxation';
 import IrrationalThoughts from './components/irrationalThoughts/IrrationalThoughts';
 import IntroComponent from './components/intro/Intro';
+import Footer from './components/footer/footer';
 // import other pages...
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
 
         {/* <Route path="/other-path" element={<OtherComponent />} /> */}
       </Routes>
+      <Footer/>
     </Router>
   );
 };
