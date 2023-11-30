@@ -12,6 +12,7 @@ const App = () => {
   return (
     <Router>
       <Navigation/>
+
       <Routes>
         <Route path="/" element={<IntroComponent />} />
         <Route path="/explore" element={<ExploreComponent />} />

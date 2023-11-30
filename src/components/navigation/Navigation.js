@@ -1,6 +1,5 @@
 import React from 'react';
 import mainLogo from '../../assets/textLogo.png';
-
 import {
   Navbar2,
   Container,
