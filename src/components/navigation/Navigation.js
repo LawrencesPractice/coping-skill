@@ -2,20 +2,15 @@ import React from 'react';
 import mainLogo from '../../assets/textLogo.png';
 
 import {
-  Root,
   Navbar2,
   Container,
   Column,
   Logo,
-  Icon,
   Column2,
-  Column3,
   SignIn,
   GetStarted,
   Explore,
   NavLinkDropdown,
-  ChevronDown,
-  Icon2,
   Column4,
   Button,
   Button2
