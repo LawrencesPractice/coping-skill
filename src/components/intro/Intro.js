@@ -3,7 +3,9 @@ import InnerCalmSection from '../introComponents/InnerCalm/InnerCalm/InnerCalm';
 
 const IntroComponent = () => {
   return (
-    <InnerCalmSection/>
+    <>
+        <InnerCalmSection/>
+    </>
   );
 }
 

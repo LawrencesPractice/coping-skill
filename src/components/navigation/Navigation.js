@@ -7,7 +7,6 @@ import {
   Column,
   Logo,
   Column2,
-  SignIn,
   GetStarted,
   Explore,
   NavLinkDropdown,
@@ -21,15 +20,14 @@ const Navigation = () => {
     <Navbar2>
       <Container>
         <Column>
-          <Logo>
+          <Logo to="/">
             <img src={mainLogo} alt="fireSpot" />
 
           </Logo>
         </Column>
         <Column2>
-          <SignIn >Sign in</SignIn>
-          <GetStarted to="/getStarted">Get started</GetStarted>
-          <Explore to="/getStarted">Explore</Explore>
+          <GetStarted to="/innerCalmExercise">Get started</GetStarted>
+          <Explore to="/explore">Explore</Explore>
           <NavLinkDropdown to="/">
             About
           </NavLinkDropdown>

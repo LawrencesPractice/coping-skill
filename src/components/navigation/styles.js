@@ -13,15 +13,16 @@ const device = {
 };
 
 export const Navbar2 = styled.div`
-  width: 90%;
+  width: 80%;  // navbar takes 80% of the screen width
+  margin: 0 auto;  // centers the navbar
+  padding: 0 50px;
   height: 93px;
   flex-direction: column;
   justify-content: center;
-  padding: 0 56px;
   background-color: #fff;
   overflow: hidden;
   box-shadow: inset 0px -0.5px 0px 0px #000;
-  
+
   @media ${device.tablet} {
     height: auto;
     padding: 0 20px;
@@ -46,15 +47,16 @@ export const Column = styled.div`
   height: min-content;
 `;
 
-export const Logo = styled.div`
-  width: 55px;
+export const Logo = styled(Link)`
+cursor: pointer;
+  width: 60px;
   height: 24px;
   font-size: 23px;
   img{
-    width: 150px;
+    width: 200px;
   height: auto;
   position: absolute;
-    top: -30px;
+    top: -58px;
   }
 `;
 
@@ -199,30 +201,42 @@ export const Column4 = styled.div`
 export const Button = styled.button`
   width: max-content;
   height: min-content;
-  padding: 7px 18px;
-  outline: solid 0.1px #000;
+  padding: 10px 18px;
+  font-size: 19px;
+  outline: none;
+  border: 1px solid #000;
   background-color: transparent;
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+  font-weight: bold;
+  box-shadow: none;
+  cursor: pointer;
 
-&:hover,
-&:focus {
-  color: #007BFF;
-  outline: none;
-}
+  &:hover,
+  &:focus {
+    color: #007bff;
+    border-color: #007bff;
+  }
 `;
-
 export const Button2 = styled.button`
-  width: max-content;
-  height: min-content;
-  padding: 7px 18px;
-  outline: solid 0.1px #000;
-  background-color: black;
-  color: white;
-  transition: color 0.2s ease-in-out;
+width: max-content;
+height: min-content;
+padding: 10px 18px;
+font-size: 19px;
 
+outline: none;
+border: 1px solid #000;
+color: white;
+background-color: black;
+display: inline-flex;
+align-items: center;
+gap: 4px;
+transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+font-weight: bold;
+box-shadow: none;
+cursor: pointer;
 &:hover,
 &:focus {
   color: #007BFF;
