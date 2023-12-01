@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import mainLogo from '../../assets/textLogo.png';
+import mainLogo from '../../assets/simple.png';
 import {
   Navbar2,
   Container,
@@ -28,13 +28,14 @@ console.log(location.pathname)
       <Container>
         <Column>
           <Logo to="/">
-            <img src={mainLogo} alt="fireSpot" />
+              <img src={mainLogo} alt="fireSpot" />
+        
           </Logo>
         </Column>
         <Column2>
           <GetStarted isHomepage={isHomepage} to="/innerCalmExercise">Get started</GetStarted>
           <Explore isHomepage={isHomepage}  to="/explore">Explore</Explore>
-           <NavLinkDropdown to="/" isHomepage={isHomepage}>About</NavLinkDropdown>
+           <NavLinkDropdown to="/about" isHomepage={isHomepage}>About</NavLinkDropdown>
           <Column4>
             <Button isHomepage={isHomepage} >
               <div className="logIn" isHomepage={isHomepage}>Log in</div>
