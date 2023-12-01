@@ -29,10 +29,11 @@ const TextContainer = styled.div`
 const Title = styled.h1`
   font-size: 36px;
   margin-bottom: 20px;
-`;
+  color: #77DD77`;
 
 const Description = styled.p`
   font-size: 18px;
+  color:  #AEC6CF;
 `;
 
 const MindfulIntroComponent = () => {
