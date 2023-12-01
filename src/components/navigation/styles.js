@@ -14,8 +14,7 @@ const device = {
 };
 
 export const Navbar2 = styled.div`
-  background-image: url(${mindfulImage});
-  background-position: center top -0px; /* Cut off top part by 100px */
+background-image: ${({ isHomepage }) => (isHomepage ? `url(${mindfulImage})` : 'none')};  background-position: center top -0px; /* Cut off top part by 100px */
   width: 80%;
   margin: 0 auto;
   padding: 0 50px;
@@ -126,7 +125,7 @@ export const GetStarted = styled(Link)`
 color: white;
 margin: 0 10px;
 text-decoration: none;
-  color: #000;   color: white;
+color: ${({ isHomepage }) => (isHomepage ? `white` : 'black')};  
 
   font-size: 18px;
   line-height: 150%;
@@ -144,11 +143,10 @@ text-decoration: none;
 `;
 
 export const Explore = styled(Link)`
-  color: white;
   margin: 0 10px;
   text-decoration: none;
-  color: #000;
-  font-size: 18px;  color: white;
+  color: ${({ isHomepage }) => (isHomepage ? `white` : 'black')};  
+  font-size: 18px;  
 
   line-height: 150%;
   font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
@@ -169,7 +167,7 @@ export const NavLinkDropdown = styled(Link)`
 color: white;
 margin: 0 10px;
 text-decoration: none;
-color: #000;  color: white;
+color: ${({ isHomepage }) => (isHomepage ? `white` : 'black')};  
 
 font-size: 18px;
 line-height: 150%;
@@ -210,7 +208,7 @@ export const Button = styled.button`
   width: max-content;
   height: min-content;
   padding: 10px 18px;  color: white;
-
+  color: ${({ isHomepage }) => (isHomepage ? `white` : 'black')};  
   font-size: 19px;
   outline: none;
   border: 1px solid #000;

@@ -1,5 +1,62 @@
 import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
 
+const InnerCalmContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 56px 10%;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: fadeIn 0.3s ease-in-out;
+  text-align: center;
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+`;
+
+const Button = styled.button`
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+const Title = styled.h2`
+font-size: 1.5em;
+color: #333;
+text-align: center;
+margin-bottom: 1em;
+`;
+const Instruction = styled.p`
+font-size: 1em;
+color: #666;
+line-height: 1.6;
+margin-bottom: 1em;
+`;
+const BulletPoint = styled.li`
+  font-size: 0.9em;
+  color: #666;
+  line-height: 1.4;
+`;
+const TimeRemaining = styled.p`
+  font-size: 1.2em;
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 2em;
+`;
 const InnerCalmExercise = () => {
   const [calmState, setCalmState] = useState(false);
   let exerciseDuration = 300;
@@ -48,10 +105,10 @@ const InnerCalmExercise = () => {
   };
 
   return (
-    <div>
+    <InnerCalmContainer>
       {!calmState ? (
-        <button onClick={handleStartExercise}>Start Inner Calm Exercise</button>
-      ) : (
+         <div>
+        <Button onClick={handleStartExercise}>Start Inner Calm Exercise</Button>  </div>    ) : (
         <div>
           {completed ? (
             <div>
@@ -60,10 +117,10 @@ const InnerCalmExercise = () => {
             </div>
           ) : (
             <div>
-              <h2>Inner Calm Exercise</h2>
-              <p>Find a quiet and comfortable space where you won't be disturbed.</p>
-              <p>Sit in a relaxed position with your back straight and your body supported.</p>
-              <p>Close your eyes and take a few slow, deep breaths.</p>
+<Title>Inner Calm Exercise</Title>
+              <Instruction>Find a quiet and comfortable space where you won't be disturbed.</Instruction>
+              <Instruction>Sit in a relaxed position with your back straight and your body supported.</Instruction>
+              <Instruction>Close your eyes and take a few slow, deep breaths.</Instruction>
               <p>
                 <span onClick={() => handleToggleSection(1)} style={{ cursor: 'pointer', fontWeight: 'bold' }}>
                   {expandedSections.includes(1) ? '▼' : '►'} Focus your attention on your breath:
@@ -71,8 +128,8 @@ const InnerCalmExercise = () => {
               </p>
               {expandedSections.includes(1) && (
                 <ul>
-                  <li>Notice the sensation as you inhale and exhale.</li>
-                  <li>Feel the rise and fall of your chest or the breath at your nostrils.</li>
+<BulletPoint>Notice the sensation as you inhale and exhale.</BulletPoint>
+<BulletPoint>Feel the rise and fall of your chest or the breath at your nostrils.</BulletPoint>
                 </ul>
               )}
               <p>
@@ -82,8 +139,8 @@ const InnerCalmExercise = () => {
               </p>
               {expandedSections.includes(2) && (
                 <ul>
-                  <li>Acknowledge any thoughts or distractions without judgment.</li>
-                  <li>Gently let go of them and bring your attention back to your breath.</li>
+                  <BulletPoint>Acknowledge any thoughts or distractions without judgment.</BulletPoint>
+                  <BulletPoint>Gently let go of them and bring your attention back to your breath.</BulletPoint>
                 </ul>
               )}
               <p>
@@ -93,17 +150,16 @@ const InnerCalmExercise = () => {
               </p>
               {expandedSections.includes(3) && (
                 <ul>
-                  <li>Let go of worries, concerns, or thoughts about the past or future.</li>
-                  <li>Be fully present with each breath, focusing on the here and now.</li>
+                 <BulletPoint>Let go of worries, concerns, or thoughts about the past or future.</BulletPoint>
+                 <BulletPoint>Be fully present with each breath, focusing on the here and now.</BulletPoint>
                 </ul>
               )}
-              <p>Continue this practice for {formatTime(timer)}.</p>
-              <button onClick={handleStopExercise}>Stop Inner Calm Exercise</button>
+<TimeRemaining>Continue this practice for {formatTime(timer)}.</TimeRemaining>              <Button onClick={handleStopExercise}>Stop Inner Calm Exercise</Button>
             </div>
           )}
         </div>
       )}
-    </div>
+    </InnerCalmContainer>
   );
 };
 
