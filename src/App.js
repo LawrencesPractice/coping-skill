@@ -14,9 +14,10 @@ const App = () => {
       <Navigation/>
 
       <Routes>
-        <Route path="/" element={<IntroComponent />} />
+        <Route path="/" element={<div></div>} />
         <Route path="/explore" element={<ExploreComponent />} />
         <Route path="/innerCalmExercise" element={<InnerCalmExercise />} />
+        <Route path="/about" element={<IntroComponent />} />
         <Route path="/irrational-thoughts" element={<IrrationalThoughts />} />
 
         {/* <Route path="/other-path" element={<OtherComponent />} /> */}

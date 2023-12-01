@@ -55,10 +55,10 @@ cursor: pointer;
   height: 24px;
   font-size: 23px;
   img{
-    width: 200px;
+    width: 50px;
   height: auto;
   position: absolute;
-    top: -58px;
+    top: 30px;
   }
 `;
 
